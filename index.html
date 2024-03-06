@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar with Dropdowns</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="navbar">
+        <div>
+          <a href="#">Products</a>
+        </div>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="searchTable()"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+      <div class="sidebar" onclick="">
+        <a href="#">Home</a>
+        <button class="dropdown-btn">
+          Services
+          <span class="material-symbols-outlined"> expand_more </span>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Web Design</a>
+          <a href="#">Graphic Design</a>
+          <a href="#">SEO</a>
+        </div>
+        <button class="dropdown-btn">
+          Products
+          <span class="material-symbols-outlined"> expand_more </span>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Roadmap</a>
+          <a href="#">Feedback</a>
+          <a href="#">Performance</a>
+          <a href="#">Team</a>
+          <a href="#">Analytics</a>
+        </div>
+        <div class="drop-container">
+          <a href="#">Sales</a>
+          <a href="#">Design</a>
+          <a href="#">Office</a>
+          <a href="#">Legal</a>
+        </div>
+        <div class="buttons">
+          <button>7 days Left</button>
+          <button>Add Biling</button>
+        </div>
+      </div>
+
+      <div class="mainbar">
+        <table id="dataTable">
+          <tr>
+            <th>Brand</th>
+            <th>Description</th>
+            <th>Members</th>
+            <th>Categories</th>
+            <th>Tags</th>
+            <th>Next Meeting</th>
+          </tr>
+          <tr>
+            <th>Wix</th>
+            <td>Develop a personalized fit</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td><button class="purple">Automation</button></td>
+            <td><button class="tags">#DigitalTransformation</button></td>
+            <td><button class="meeting">in 30 minutes</button></td>
+          </tr>
+          <tr>
+            <th>Shopify</th>
+            <td>Introduce a cloud based</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td>
+              <button class="yellow">E-commerce</button>
+              <button class="yellow">B2B</button>
+            </td>
+            <td><button class="tags">#OnlineShopping</button></td>
+            <td><button class="meeting">Tomorow</button></td>
+          </tr>
+          <tr>
+            <th>MailChimp</th>
+            <td>Develop a mobile app</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td>
+              <button class="green">SAAS</button>
+              <button class="yellow">Mobile</button>
+            </td>
+            <td><button class="tags">#Technovation</button></td>
+            <td><button class="meeting">Tomorow</button></td>
+          </tr>
+          <tr>
+            <th>PayPal</th>
+            <td>This program could include</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td><button class="green">Marketplace</button></td>
+            <td><button class="tags">#BuySellOnline</button></td>
+            <td><button class="meeting">in 6 Hours</button></td>
+          </tr>
+          <tr>
+            <th>Disney</th>
+            <td>Introduce a B2B Solution</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td>
+              <button class="yellow">B2B</button>
+              <button class="yellow">B2C</button>
+            </td>
+            <td><button class="tags">#BusinessPartnerships</button></td>
+            <td><button class="meeting-red">No Contact</button></td>
+          </tr>
+          <tr>
+            <th>Indeed</th>
+            <td>Implement an AI driver</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td>
+              <button class="blue">Technology</button>
+              <button class="green">SAAS</button>
+            </td>
+            <td><button class="tags">#SmartFinance</button></td>
+            <td><button class="meeting">in 1 hour</button></td>
+          </tr>
+          <tr>
+            <th>Google</th>
+            <td>Offer a comprehensive</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td>
+              <button class="yellow">Finance</button>
+              <button class="purple">Automation</button>
+            </td>
+            <td><button class="tags">#SmartFinance</button></td>
+            <td><button class="meeting">in 30 minutes</button></td>
+          </tr>
+          <tr>
+            <th>Evernote</th>
+            <td>This could include smart</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td><button class="yellow">Transportation</button></td>
+            <td><button class="tags">#LogisticTech</button></td>
+            <td><button class="meeting-fade">Next month</button></td>
+          </tr>
+          <tr>
+            <th>Microsoft</th>
+            <td>Launch an advisory service</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td>
+              <button class="purple">Publishing</button>
+              <button class="yellow">B2C</button>
+            </td>
+            <td><button class="tags">#Marketing</button></td>
+            <td><button class="meeting-red">No Contact</button></td>
+          </tr>
+          <tr>
+            <th>Invision</th>
+            <td>The tool would analyze</td>
+            <td>
+              <span class="material-symbols-outlined">
+                supervised_user_circle </span
+              ><span class="material-symbols-outlined">
+                supervised_user_circle
+              </span>
+            </td>
+            <td><button class="blue">Web Services</button></td>
+            <td><button class="tags">#APIIntegration</button></td>
+            <td><button class="meeting-fade">Next month</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      // Toggle dropdown menus
+      function searchTable() {
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.querySelector(".search-input");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("dataTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) {
+          tr[i].classList.remove("hidden");
+          td = tr[i].getElementsByTagName("td");
+
+          for (j = 0; j < td.length; j++) {
+            txtValue = td[j].textContent || td[j].innerText;
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              break;
+            } else if (j === td.length - 1) {
+              tr[i].classList.add("hidden");
+            }
+          }
+        }
+      }
+
+      document.querySelectorAll(".dropdown-btn").forEach(function (item) {
+        item.addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      });
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
